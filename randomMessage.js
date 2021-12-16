@@ -1,5 +1,5 @@
 //random number from 0-4 inclusive.
-let randNum = Math.floor(Math.random() * 5)
+/*let randNum = Math.floor(Math.random() * 5)
 let message = ""
 switch (randNum) {
     case 0:
@@ -19,3 +19,20 @@ switch (randNum) {
         break;
 }
 console.log(message)
+*/
+
+// For three pieces of data. Theory: random message should be composed of three random components.
+
+const messageInComponents = {
+    //key-value pairs
+        subject: ["Your life","You","Your career","Your relationships"],
+        body: ["will be composed of","can have","will be full of"],
+        conclusion: ["great memories.","fufilling times.","hungry moments.","lots of laughs."]
+} 
+
+let randSubject = Math.floor(Math.random() * messageInComponents.subject.length)
+let randBody = Math.floor(Math.random() * messageInComponents.body.length)
+let randConclusion = Math.floor(Math.random() * messageInComponents.conclusion.length)
+
+let message = `${messageInComponents.subject[randSubject]} ${messageInComponents.body[randBody]} ${messageInComponents.conclusion[randConclusion]}` 
+console.log(message) 
